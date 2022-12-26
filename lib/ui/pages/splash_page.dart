@@ -10,6 +10,7 @@ class SplashPage extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: 100,
