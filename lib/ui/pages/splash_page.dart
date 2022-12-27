@@ -15,12 +15,21 @@ class SplashPage extends StatelessWidget {
             Container(
               width: 100,
               height: 100,
+              margin: EdgeInsets.only(bottom: 50),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/icon_plane.png',
                   ),
                 ),
+              ),
+            ),
+            Text(
+              'AIRPLANE',
+              style: whiteTextStyle.copyWith(
+                fontSize: 32,
+                fontWeight: medium,
+                letterSpacing: 10,
               ),
             ),
           ],
