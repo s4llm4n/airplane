@@ -20,7 +20,7 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget inputSection() {
-      Widget emailInput() {
+      Widget nameInput() {
         return Container(
           margin: EdgeInsets.only(bottom: 20),
           child: Column(
@@ -56,6 +56,42 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
+      Widget emailInput() {
+        return Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Email Address',
+              ),
+              SizedBox(
+                height: 6,
+              ),
+              TextFormField(
+                cursorColor: kBlackColor,
+                decoration: InputDecoration(
+                  hintText: 'Your email',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                      ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                    ),
+                    borderSide: BorderSide(
+                      color: kPrimaryColor,
+                      ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+
       return Container(
         margin: EdgeInsets.only(top: 30),
         padding: EdgeInsets.symmetric(
@@ -70,6 +106,7 @@ class SignUpPage extends StatelessWidget {
         ),
         child: Column(
           children: [
+            nameInput(),
             emailInput(),
           ],
         ),
