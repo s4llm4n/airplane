@@ -39,7 +39,7 @@ class SignUpPage extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(
                       defaultRadius,
-                      ),
+                    ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(
@@ -47,7 +47,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     borderSide: BorderSide(
                       color: kPrimaryColor,
-                      ),
+                    ),
                   ),
                 ),
               ),
@@ -71,11 +71,11 @@ class SignUpPage extends StatelessWidget {
               TextFormField(
                 cursorColor: kBlackColor,
                 decoration: InputDecoration(
-                  hintText: 'Your email',
+                  hintText: 'Your email address',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(
                       defaultRadius,
-                      ),
+                    ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(
@@ -83,11 +83,110 @@ class SignUpPage extends StatelessWidget {
                     ),
                     borderSide: BorderSide(
                       color: kPrimaryColor,
-                      ),
+                    ),
                   ),
                 ),
               ),
             ],
+          ),
+        );
+      }
+
+      Widget passwordInput() {
+        return Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Password',
+              ),
+              SizedBox(
+                height: 6,
+              ),
+              TextFormField(
+                cursorColor: kBlackColor,
+                decoration: InputDecoration(
+                  hintText: 'Your password',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                    ),
+                    borderSide: BorderSide(
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget hobbyInput() {
+        return Container(
+          margin: EdgeInsets.only(bottom: 30),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Hobby',
+              ),
+              SizedBox(
+                height: 6,
+              ),
+              TextFormField(
+                cursorColor: kBlackColor,
+                decoration: InputDecoration(
+                  hintText: 'Your hobby',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(
+                      defaultRadius,
+                    ),
+                    borderSide: BorderSide(
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget submitButton() {
+        return Container(
+          width: double.infinity,
+          height: 55,
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/bonus');
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: kPrimaryColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  defaultRadius,
+                ),
+              ),
+            ),
+            child: Text(
+              'Get Started',
+              style: whiteTextStyle.copyWith(
+                fontSize: 18,
+                fontWeight: medium,
+              ),
+            ),
           ),
         );
       }
@@ -108,7 +207,28 @@ class SignUpPage extends StatelessWidget {
           children: [
             nameInput(),
             emailInput(),
+            passwordInput(),
+            hobbyInput(),
+            submitButton(),
           ],
+        ),
+      );
+    }
+
+    Widget tacButton() {
+      return Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(
+          top: 50,
+          bottom: 73,
+        ),
+        child: Text(
+          'Terms and Conditions',
+          style: greyTextStyle.copyWith(
+            fontSize: 16,
+            fontWeight: light,
+            decoration: TextDecoration.underline,
+          ),
         ),
       );
     }
@@ -123,6 +243,7 @@ class SignUpPage extends StatelessWidget {
           children: [
             title(),
             inputSection(),
+            tacButton(),
           ],
         ),
       ),
