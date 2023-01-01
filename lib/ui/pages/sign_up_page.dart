@@ -1,3 +1,4 @@
+import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -165,7 +166,12 @@ class SignUpPage extends StatelessWidget {
       }
 
       Widget submitButton() {
-        return ;
+        return CustomButton(
+          title: 'Get Started', 
+          onPressed: () {
+            Navigator.pushNamed(context, '/bonus');
+          },
+        );
       }
 
       return Container(
