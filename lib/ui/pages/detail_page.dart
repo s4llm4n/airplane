@@ -145,7 +145,9 @@ class DetailPage extends StatelessWidget {
                   style: blackTextStyle.copyWith(
                     height: 2.6,
                   ),
-                  ), 
+                ), 
+
+                
                 ],
               ),
             ),
