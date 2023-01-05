@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/interest_item.dart';
 import 'package:airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 
@@ -142,6 +143,9 @@ class DetailPage extends StatelessWidget {
                       fontWeight: semiBold,
                     ),
                   ),
+                  SizedBox(
+                    height: 6,
+                  ),
                   Text('Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letknya yang dekat dengan kebun Raya Eka Karya, Menjadikan tempat Bali',
                   style: blackTextStyle.copyWith(
                     height: 2.6,
@@ -177,9 +181,49 @@ class DetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
+                  // NOTE: INTEREST
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Interest',
+                    style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'Kids Park',
+                      ),
+                      InterestItem(
+                        text: 'Honor Bridge',
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'City Museum',
+                      ),
+                      InterestItem(
+                        text: 'Central mall',
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
+
+            
           ],
         ),
       );
@@ -187,12 +231,14 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(
-        children: [
-          backgroundImage(),
-          customShadow(),
-          content(),
-        ],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            backgroundImage(),
+            customShadow(),
+            content(),
+          ],
+        ),
       ),
     );
   }
