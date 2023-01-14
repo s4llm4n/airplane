@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/theme.dart';
 
+// ignore: must_be_immutable
 class SignUpPage extends StatelessWidget {
   SignUpPage({Key? key}) : super(key: key);
 
@@ -66,8 +67,8 @@ class SignUpPage extends StatelessWidget {
         return BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
             if (state is AuthSuccess) {
-              Navigator.pushAndRemoveUntil(
-                context, '/bonus', (route) => false);
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/bonus', (route) => false);
             } else if (state is AuthFailed) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -78,10 +79,20 @@ class SignUpPage extends StatelessWidget {
             }
           },
           builder: (context, state) {
+            if (state is AuthLoading) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+
             return CustomButton(
               title: 'Get Started',
               onPressed: () {
-                Navigator.pushNamed(context, '/bonus');
+                context.read<AuthCubit>().signUp(
+                    email: emailController.text,
+                    password: passwordController.text,
+                    name: nameController.text,
+                    hobby: hobbyController.text);
               },
             );
           },
