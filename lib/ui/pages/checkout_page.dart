@@ -11,7 +11,7 @@ class CheckoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget route() {
       return Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: const EdgeInsets.only(top: 70),
         child: Column(
           children: [
             Container(
