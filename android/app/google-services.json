@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "709177005267",
+    "project_id": "coba-prog",
+    "storage_bucket": "coba-prog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709177005267:android:7bb8e00986b974c35ff026",
+        "android_client_info": {
+          "package_name": "com.s4llm4n.airplane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709177005267-oa6pfnsssen6fbtaeup4gfk6qm3pjnk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKQmbE3gEo-mJCc-CoIfpy0xgwDTl77xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709177005267-oa6pfnsssen6fbtaeup4gfk6qm3pjnk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
