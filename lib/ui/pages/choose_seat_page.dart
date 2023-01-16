@@ -18,7 +18,7 @@ class ChooseSeatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 50),
+        margin: const EdgeInsets.only(top: 50),
         child: Text(
           'Select Your\nFavourite Seat',
           style: blackTextStyle.copyWith(
@@ -31,15 +31,15 @@ class ChooseSeatPage extends StatelessWidget {
 
     Widget seatStatus() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 30),
         child: Row(
           children: [
             // NOTE: AVAILABLE
             Container(
               width: 16,
               height: 16,
-              margin: EdgeInsets.only(right: 6),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(right: 6),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/icon_available.png',
@@ -55,8 +55,8 @@ class ChooseSeatPage extends StatelessWidget {
             Container(
               width: 16,
               height: 16,
-              margin: EdgeInsets.only(left: 10, right: 6),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(left: 10, right: 6),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/icon_selected.png',
@@ -72,8 +72,8 @@ class ChooseSeatPage extends StatelessWidget {
             Container(
               width: 16,
               height: 16,
-              margin: EdgeInsets.only(left: 10, right: 6),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(left: 10, right: 6),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/icon_unavailable.png',
@@ -95,8 +95,8 @@ class ChooseSeatPage extends StatelessWidget {
         builder: (context, state) {
           return Container(
             width: double.infinity,
-            margin: EdgeInsets.only(top: 30),
-            padding: EdgeInsets.symmetric(
+            margin: const EdgeInsets.only(top: 30),
+            padding:  const EdgeInsets.symmetric(
               horizontal: 22,
               vertical: 30,
             ),

@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DestinationService {
   CollectionReference _destinationReference =
-      FirebaseFirestore.instance.collection('destinations');
+      FirebaseFirestore.instance.collection('destination');
 
   Future<List<DestinationModel>> fetchDestinations() async {
     try {

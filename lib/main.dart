@@ -18,7 +18,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -47,13 +47,13 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) => SplashPage(),
-          '/get-started': (context) => GetStartedPage(),
+          '/': (context) => const SplashPage(),
+          '/get-started': (context) => const GetStartedPage(),
           '/sign-up': (context) => SignUpPage(),
           '/sign-in': (context) => SignInPage(),
-          '/bonus': (context) => BonusPage(),
-          '/main': (context) => MainPage(),
-          '/success' : (context) => SuccessCheckoutPage(),
+          '/bonus': (context) => const BonusPage(),
+          '/main': (context) => const MainPage(),
+          '/success' : (context) => const SuccessCheckoutPage(),
         },
       ),
     );
